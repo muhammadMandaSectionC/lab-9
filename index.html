@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+    />
+    <link rel="stylesheet" href="gallery.css" />
+
+    <title>Photo gallery</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Photo Gallery</h1>
+    <div class="gallery">
+      <ul class="controls">
+        <li class="buttons" data-filter="all">all</li>
+        <li class="buttons" data-filter="mercedes">mercedes</li>
+        <li class="buttons" data-filter="bugatti">bugatti</li>
+        <li class="buttons" data-filter="porche">porche</li>
+      </ul>
+      <div class="image-container">
+        <a href="Mercedes-AMG GTR/ Mercedes-AMG GTR.jpg" class="image mercedes"
+          ><img src="Mercedes-AMG GTR/ Mercedes-AMG GTR.jpg" alt=""
+        /></a>
+        <a
+          href="Mercedes-AMG GTR/aaron-huber-TkWsPTr7DMo-unsplash.jpg"
+          class="image mercedes"
+        >
+          <img
+            src="Mercedes-AMG GTR/aaron-huber-TkWsPTr7DMo-unsplash.jpg"
+            alt=""
+          />
+        </a>
+        <a
+          href="Mercedes-AMG GTR/daniil-lyusov-dFsDUlqdaGY-unsplash.jpg"
+          class="image mercedes"
+        >
+          <img
+            src="Mercedes-AMG GTR/daniil-lyusov-dFsDUlqdaGY-unsplash.jpg"
+            alt=""
+          />
+        </a>
+        <a
+          href="Mercedes-AMG GTR/marcel-strauss-7Ea734WnVEc-unsplash.jpg"
+          class="image mercedes"
+        >
+          <img
+            src="Mercedes-AMG GTR/marcel-strauss-7Ea734WnVEc-unsplash.jpg"
+            alt=""
+          />
+        </a>
+        <a
+          href="Mercedes-AMG GTR/simon-weisser-6-ye2bLleQ8-unsplash.jpg"
+          class="image mercedes"
+        >
+          <img
+            src="Mercedes-AMG GTR/simon-weisser-6-ye2bLleQ8-unsplash.jpg"
+            alt=""
+          />
+        </a>
+        <a
+          href="Bugatti Chiron/alexandre-bury-NVXwlz2CXuI-unsplash.jpg"
+          class="image bugatti"
+        >
+          <img
+            src="Bugatti Chiron/alexandre-bury-NVXwlz2CXuI-unsplash.jpg"
+            alt=""
+          />
+        </a>
+        <a
+          href="Bugatti Chiron/david-leveque-esvWH-owWug-unsplash.jpg"
+          class="image bugatti"
+        >
+          <img
+            src="Bugatti Chiron/david-leveque-esvWH-owWug-unsplash.jpg"
+            alt=""
+          />
+        </a>
+        <a
+          href="Bugatti Chiron/marvin-meyer-CyXW7UbiGZo-unsplash.jpg"
+          class="image bugatti"
+        >
+          <img
+            src="Bugatti Chiron/marvin-meyer-CyXW7UbiGZo-unsplash.jpg"
+            alt=""
+          />
+        </a>
+        <a
+          href="Bugatti Chiron/tim-meyer-AsT9Dt11FkA-unsplash.jpg"
+          class="image bugatti"
+        >
+          <img src="Bugatti Chiron/tim-meyer-AsT9Dt11FkA-unsplash.jpg" alt="" />
+        </a>
+        <a
+          href="Bugatti Chiron/tim-meyer-X82rGvu3vmA-unsplash.jpg"
+          class="image bugatti"
+        >
+          <img src="Bugatti Chiron/tim-meyer-X82rGvu3vmA-unsplash.jpg" alt="" />
+        </a>
+
+        <a
+          href="porche/alex-rhee-7aFVIa4NsD8-unsplash.jpg"
+          class="image porche"
+        >
+          <img src="porche/alex-rhee-7aFVIa4NsD8-unsplash.jpg" alt="" />
+        </a>
+        <a
+          href="porche/hayes-potter-OQZgu5iYsZI-unsplash.jpg"
+          class="image porche"
+        >
+          <img src="porche/hayes-potter-OQZgu5iYsZI-unsplash.jpg" alt="" />
+        </a>
+        <a
+          href="porche/jan-ivo-henze-EbHmBH2koHU-unsplash.jpg"
+          class="image porche"
+        >
+          <img src="porche/jan-ivo-henze-EbHmBH2koHU-unsplash.jpg" alt="" />
+        </a>
+        <a
+          href="porche/jan-ivo-henze-F6NP1s-joVU-unsplash.jpg"
+          class="image porche"
+        >
+          <img src="porche/jan-ivo-henze-F6NP1s-joVU-unsplash.jpg" alt="" />
+        </a>
+        <a
+          href="porche/sander-trooijen-n7TjxtaTzY0-unsplash.jpg"
+          class="image porche"
+        >
+          <img src="porche/sander-trooijen-n7TjxtaTzY0-unsplash.jpg" alt="" />
+        </a>
+        <a
+          href="porche/tim-meyer-mApCPJrEVxo-unsplash.jpg"
+          class="image porche"
+        >
+          <img src="porche/tim-meyer-mApCPJrEVxo-unsplash.jpg" alt="" />
+        </a>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".buttons").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
+
+          let filter = $(this).attr("data-filter");
+          if (filter == "all") {
+            $(".image").fadeIn(400);
+          } else {
+            $(".image").fadeIn(400);
+            $(".image")
+              .not("." + filter)
+              .fadeOut(200);
+            $(".image")
+              .not("." + filter)
+              .fadeOut(400);
+          }
+        });
+
+        $(".gallery").magnificPopup({
+          delegate: "a",
+          type: "image",
+          gallery: {
+            enabled: true,
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
